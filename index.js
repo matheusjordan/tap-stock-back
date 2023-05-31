@@ -1,17 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 const { Pool } = require('pg');
 const cors = require('cors');
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'store',
-    password: 'root',
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASSWORD,
     port: 5432,
 });
 

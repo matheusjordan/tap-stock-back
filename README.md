@@ -2,6 +2,12 @@
 
 Projeto de backend para disciplina TAP
 
+## Como instalar dependencias
+
+```
+npm install
+```
+
 ## Como rodar o projeto
 
 ```

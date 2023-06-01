@@ -6,9 +6,6 @@
 # logs
 *.log
 
-# environment variables
-.env
-
 # build files
 /dist
 
